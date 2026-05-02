@@ -56,12 +56,9 @@ export function TestimonialsSection() {
               </div>
               <p className="mt-6 text-lg leading-8 text-slate-600 transition-colors duration-300 dark:text-slate-300">&quot;{testimonial.content}&quot;</p>
               <div className="mt-8 flex items-center gap-4">
-                <img
-                  src={testimonial.image}
-                  alt={testimonial.name}
-                  className="h-12 w-12 rounded-full object-cover"
-                  loading="lazy"
-                />
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#e27a1b]/15 text-sm font-bold text-[#e27a1b]">
+                  {testimonial.name.split(' ').map(n => n[0]).join('')}
+                </div>
                 <div>
                   <h4 className="font-bold text-slate-950 transition-colors duration-300 dark:text-slate-50">{testimonial.name}</h4>
                   <p className="text-sm text-slate-500 transition-colors duration-300 dark:text-slate-400">{testimonial.role}</p>
