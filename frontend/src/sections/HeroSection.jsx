@@ -63,6 +63,8 @@ export function HeroSection() {
                   src={portraitImage}
                   alt="Sourabh Joshi portrait"
                   className="h-[420px] w-full rounded-[2.25rem] object-cover object-top"
+                  fetchpriority="high"
+                  decoding="async"
                 />
               </div>
             </Motion.div>

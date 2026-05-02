@@ -57,10 +57,12 @@ export function ProjectsSection() {
                 className="group flex h-full flex-col overflow-hidden rounded-4xl border border-slate-200 bg-white shadow-[0_10px_30px_rgba(15,23,42,0.06)] transition-colors duration-300 dark:border-slate-800 dark:bg-slate-900"
             >
               <div className="relative h-48 w-full overflow-hidden bg-slate-100 dark:bg-slate-800">
-                <img 
-                  src={project.image} 
-                  alt={project.name} 
+                <img
+                  src={project.image}
+                  alt={project.name}
                   className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                  decoding="async"
                   onError={(e) => { e.target.style.opacity = '0'; }}
                 />
                 
