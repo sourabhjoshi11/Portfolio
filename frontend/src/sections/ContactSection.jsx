@@ -46,8 +46,7 @@ export function ContactSection() {
 
     const formData = new FormData(e.target)
     
-    // IMPORTANT: Get your free access key from https://web3forms.com/ and paste it below
-    formData.append("access_key", "YOUR_ACCESS_KEY_HERE")
+    formData.append("access_key", import.meta.env.VITE_WEB3FORMS_KEY)
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
