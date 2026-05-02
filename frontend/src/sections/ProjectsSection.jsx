@@ -44,7 +44,7 @@ export function ProjectsSection() {
         <SectionHeading
           eyebrow="Portfolio"
           title="Each project is a unique piece of development"
-          description="Card-led project previews keep the page easy to scan while still feeling premium and interactive."
+          description=""
         />
       </Reveal>
 

@@ -7,7 +7,9 @@ export function SectionHeading({ eyebrow, title, description, align = 'left' }) 
       <h2 className="mt-4 text-2xl font-black tracking-tight text-slate-950 transition-colors duration-300 dark:text-slate-50 sm:text-3xl md:text-4xl lg:text-5xl">
         {title}
       </h2>
-      <p className="mt-6 max-w-2xl text-base leading-8 text-slate-500 transition-colors duration-300 dark:text-slate-400 sm:text-lg">{description}</p>
+      {description && (
+        <p className="mt-6 max-w-2xl text-base leading-8 text-slate-500 transition-colors duration-300 dark:text-slate-400 sm:text-lg">{description}</p>
+      )}
     </div>
   )
 }
