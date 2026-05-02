@@ -43,7 +43,7 @@ export function TestimonialsSection() {
         />
       </Reveal>
 
-      <div className="mt-12 grid gap-6 lg:grid-cols-2 xl:grid-cols-4">
+      <div className="mt-12 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
         {testimonials.map((testimonial, index) => (
           <Reveal key={testimonial.name} delay={index * 0.06} className="h-full">
             <div className="flex h-full flex-col justify-between rounded-3xl border border-slate-100 bg-white p-8 shadow-[0_12px_35px_rgba(15,23,42,0.06)] transition-colors duration-300 dark:border-slate-800 dark:bg-slate-900">
@@ -56,12 +56,9 @@ export function TestimonialsSection() {
               </div>
               <p className="mt-6 text-lg leading-8 text-slate-600 transition-colors duration-300 dark:text-slate-300">&quot;{testimonial.content}&quot;</p>
               <div className="mt-8 flex items-center gap-4">
-                <img
-                  src={testimonial.image}
-                  alt={testimonial.name}
-                  className="h-12 w-12 rounded-full object-cover"
-                  loading="lazy"
-                />
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#e27a1b]/15 text-sm font-bold text-[#e27a1b]">
+                  {testimonial.name.split(' ').map(n => n[0]).join('')}
+                </div>
                 <div>
                   <h4 className="font-bold text-slate-950 transition-colors duration-300 dark:text-slate-50">{testimonial.name}</h4>
                   <p className="text-sm text-slate-500 transition-colors duration-300 dark:text-slate-400">{testimonial.role}</p>

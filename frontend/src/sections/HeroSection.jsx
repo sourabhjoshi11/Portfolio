@@ -21,7 +21,7 @@ export function HeroSection() {
             <p className="text-lg font-semibold text-[#e27a1b] sm:text-xl">AI & Full-Stack Developer</p>
           </Reveal>
           <Reveal delay={0.05}>
-            <h1 className="mt-5 text-5xl font-black leading-tight tracking-tight text-slate-950 transition-colors duration-300 dark:text-slate-50 sm:text-6xl lg:text-7xl">
+            <h1 className="mt-5 text-[2.15rem] font-black leading-tight tracking-tight text-slate-950 transition-colors duration-300 dark:text-slate-50 sm:text-5xl lg:text-7xl">
               Hi, I&apos;m Sourabh Joshi. An AI & Full-Stack Developer based in Indore, India.
             </h1>
           </Reveal>
@@ -62,7 +62,9 @@ export function HeroSection() {
                 <img
                   src={portraitImage}
                   alt="Sourabh Joshi portrait"
-                  className="h-[420px] w-full rounded-[2.25rem] object-cover object-top"
+                  className="h-[300px] w-full rounded-[2.25rem] object-cover object-top sm:h-[420px]"
+                  fetchpriority="high"
+                  decoding="async"
                 />
               </div>
             </Motion.div>

@@ -19,6 +19,7 @@ function App() {
   ]
 
   const [isDarkMode, setIsDarkMode] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   useEffect(() => {
     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -52,14 +53,14 @@ function App() {
 
       <header className="sticky top-0 z-50 border-b border-black/5 bg-white/95 backdrop-blur-xl transition-colors duration-300 dark:border-white/10 dark:bg-[#0f172a]/95">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-5 sm:px-6 lg:px-8">
-          <a 
-            href="#home" 
+          <a
+            href="#home"
             className="text-2xl font-bold tracking-wider text-[#e27a1b]"
             style={{ fontFamily: "'Dancing Script', cursive" }}
           >
             Sourabh Joshi
           </a>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3">
             <nav className="hidden items-center gap-8 text-[15px] font-medium text-slate-900 dark:text-slate-200 md:flex">
               {navLinks.map(([label, href]) => (
                 <a key={label} href={href} className={label === 'Contact' ? 'text-[#e27a1b] transition hover:opacity-80' : 'transition hover:text-[#e27a1b]'}>
@@ -86,13 +87,43 @@ function App() {
 
             <button
               type="button"
-              aria-label="Menu"
-              className="flex h-12 w-12 items-center justify-center text-3xl text-slate-950 transition hover:text-[#e27a1b] dark:text-slate-200 md:hidden"
+              onClick={() => setIsMenuOpen(o => !o)}
+              aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-100 text-slate-600 transition hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-slate-700 md:hidden"
             >
-              ×
+              {isMenuOpen ? (
+                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              )}
             </button>
           </div>
         </div>
+
+        {isMenuOpen && (
+          <nav className="border-t border-black/5 px-4 py-4 dark:border-white/10 md:hidden">
+            <div className="flex flex-col gap-1">
+              {navLinks.map(([label, href]) => (
+                <a
+                  key={label}
+                  href={href}
+                  onClick={() => setIsMenuOpen(false)}
+                  className={`rounded-xl px-4 py-3 text-base font-medium transition ${
+                    label === 'Contact'
+                      ? 'text-[#e27a1b]'
+                      : 'text-slate-700 hover:bg-slate-100 hover:text-[#e27a1b] dark:text-slate-200 dark:hover:bg-slate-800'
+                  }`}
+                >
+                  {label}
+                </a>
+              ))}
+            </div>
+          </nav>
+        )}
       </header>
 
       <main className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
