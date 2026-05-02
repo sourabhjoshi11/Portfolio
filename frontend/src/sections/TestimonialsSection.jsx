@@ -43,7 +43,7 @@ export function TestimonialsSection() {
         />
       </Reveal>
 
-      <div className="mt-12 grid gap-6 lg:grid-cols-2 xl:grid-cols-4">
+      <div className="mt-12 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
         {testimonials.map((testimonial, index) => (
           <Reveal key={testimonial.name} delay={index * 0.06} className="h-full">
             <div className="flex h-full flex-col justify-between rounded-3xl border border-slate-100 bg-white p-8 shadow-[0_12px_35px_rgba(15,23,42,0.06)] transition-colors duration-300 dark:border-slate-800 dark:bg-slate-900">
