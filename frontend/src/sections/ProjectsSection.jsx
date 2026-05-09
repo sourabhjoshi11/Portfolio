@@ -13,10 +13,10 @@ const projects = [
   },
   {
     name: 'Medicos Buddy',
-    type: 'Healthcare Platform',
-    summary: 'A comprehensive medical admin platform streamlining healthcare workflows and patient management.',
+    type: 'Medical Study Platform',
+    summary: 'All-in-one medical exam companion with smart notes and previous year question papers for MBBS & BPT students.',
     image: '/medicosebuddy.webp',
-    tags: ['Healthcare', 'Admin', 'Dashboard'],
+    tags: ['EdTech', 'Healthcare', 'React'],
     liveLink: 'https://medicosebuddy.online',
   },
   {
@@ -30,9 +30,9 @@ const projects = [
   {
     name: 'ClaimGuard AI',
     type: 'AI System',
-    summary: 'An AI-powered claim processor designed to automate and streamline insurance claims.',
+    summary: 'Detects vehicle damage from photos, scores severity and estimates repair costs instantly using AI.',
     image: '/claimguard.webp',
-    tags: ['AI', 'Automation', 'Processing'],
+    tags: ['AI', 'Insurance', 'Computer Vision'],
     liveLink: 'https://tanstack-start-app.sourabhjoshi2906.workers.dev',
   },
 ]
@@ -107,7 +107,7 @@ export function ProjectsSection() {
                       rel="noreferrer"
                       className="flex-1 rounded-full bg-[#e27a1b] px-4 py-3 text-center text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#cf6f17]"
                     >
-                      Live Demo
+                      Visit Site
                     </a>
                   ) : (
                     <div className="flex-1 rounded-full bg-slate-100 px-4 py-3 text-center text-sm font-semibold text-slate-400 cursor-not-allowed dark:bg-slate-800 dark:text-slate-500">
