@@ -4,31 +4,33 @@ import { SectionHeading } from '../components/SectionHeading'
 const testimonials = [
   {
     name: 'Vijay Sardhara',
-    role: 'Product Manager',
     content: 'The result felt polished, lightweight, and easy to navigate on every screen.',
     rating: 5,
-    image: '/testimonials/vijay.jpg',
   },
   {
     name: 'Nishi Patel',
-    role: 'UI Designer',
     content: 'The spacing, hierarchy, and hover states created a premium visual feel.',
     rating: 5,
-    image: '/testimonials/nishi.jpg',
+  },
+  {
+    name: 'Amisha Vernekar',
+    content: 'Yogpratha looks absolutely beautiful! I was so happy with how clean and calming the website feels. It perfectly captures the essence of yoga and wellness.',
+    rating: 5,
+  },
+  {
+    name: 'Rahul Sharma',
+    content: 'Medicos Buddy has been a game changer for my MBBS prep. The notes and PYQ papers are incredibly well organised — exactly what medical students need.',
+    rating: 5,
   },
   {
     name: 'Piyush Nathani',
-    role: 'Software Engineer',
     content: 'The presentation stayed clean and the interactions felt smooth and deliberate.',
     rating: 5,
-    image: '/testimonials/piyush.jpg',
   },
   {
     name: 'Hiren Gohel',
-    role: 'Tech Lead',
     content: 'The overall structure made the portfolio feel organized and modern.',
     rating: 5,
-    image: '/testimonials/hiren.jpg',
   },
 ]
 
@@ -43,7 +45,7 @@ export function TestimonialsSection() {
         />
       </Reveal>
 
-      <div className="mt-12 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
+      <div className="mt-12 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
         {testimonials.map((testimonial, index) => (
           <Reveal key={testimonial.name} delay={index * 0.06} className="h-full">
             <div className="flex h-full flex-col justify-between rounded-3xl border border-slate-100 bg-white p-8 shadow-[0_12px_35px_rgba(15,23,42,0.06)] transition-colors duration-300 dark:border-slate-800 dark:bg-slate-900">
@@ -54,15 +56,12 @@ export function TestimonialsSection() {
                   </svg>
                 ))}
               </div>
-              <p className="mt-6 text-lg leading-8 text-slate-600 transition-colors duration-300 dark:text-slate-300">&quot;{testimonial.content}&quot;</p>
+              <p className="mt-6 text-base leading-8 text-slate-600 transition-colors duration-300 dark:text-slate-300">&quot;{testimonial.content}&quot;</p>
               <div className="mt-8 flex items-center gap-4">
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#e27a1b]/15 text-sm font-bold text-[#e27a1b]">
                   {testimonial.name.split(' ').map(n => n[0]).join('')}
                 </div>
-                <div>
-                  <h4 className="font-bold text-slate-950 transition-colors duration-300 dark:text-slate-50">{testimonial.name}</h4>
-                  <p className="text-sm text-slate-500 transition-colors duration-300 dark:text-slate-400">{testimonial.role}</p>
-                </div>
+                <h4 className="font-bold text-slate-950 transition-colors duration-300 dark:text-slate-50">{testimonial.name}</h4>
               </div>
             </div>
           </Reveal>
