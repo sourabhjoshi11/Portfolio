@@ -17,7 +17,7 @@ const projects = [
     summary: 'A comprehensive medical admin platform streamlining healthcare workflows and patient management.',
     image: '/medicosebuddy.webp',
     tags: ['Healthcare', 'Admin', 'Dashboard'],
-    liveLink: 'https://medicosebuddy.online/admin',
+    liveLink: 'https://medicosebuddy.online',
   },
   {
     name: 'Internal Knowledge Assessment',
