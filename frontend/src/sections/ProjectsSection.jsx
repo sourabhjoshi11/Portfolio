@@ -12,12 +12,12 @@ const projects = [
     liveLink: 'https://www.yogpratha.com',
   },
   {
-    name: 'Moody Player IO',
-    type: 'Web Application',
-    summary: 'An interactive music player application with dynamic UI and mood-based features.',
-    image: '/moody.webp',
-    tags: ['React', 'Music', 'Interactive'],
-    liveLink: 'https://moody-player-io.vercel.app',
+    name: 'Medicos Buddy',
+    type: 'Healthcare Platform',
+    summary: 'A comprehensive medical admin platform streamlining healthcare workflows and patient management.',
+    image: '/medicosebuddy.webp',
+    tags: ['Healthcare', 'Admin', 'Dashboard'],
+    liveLink: 'https://medicosebuddy.online/admin',
   },
   {
     name: 'Internal Knowledge Assessment',
@@ -29,11 +29,11 @@ const projects = [
   },
   {
     name: 'ClaimGuard AI',
-    type: 'AI System (Coming Soon)',
+    type: 'AI System',
     summary: 'An AI-powered claim processor designed to automate and streamline insurance claims.',
     image: '/claimguard.webp',
     tags: ['AI', 'Automation', 'Processing'],
-    liveLink: null,
+    liveLink: 'https://tanstack-start-app.sourabhjoshi2906.workers.dev',
   },
 ]
 
